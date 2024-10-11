@@ -3,6 +3,8 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    # xwayland.enable = true;
 
     plugins = [
       # inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
@@ -11,16 +13,15 @@
     ];
 
     settings = {
-      monitor = "eDP-1, 2560x1440@120, 0x0, 1";
+      monitor = "eDP-1,2560x1440@120,0x0,1";
 
       exec-once = [
-        "swww init"
+        "waybar & swww init"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
       env = [
-        "HYPRCURSOR_THEME, rose-pine-hyprcursor"
-        "HYPRCURSOR_SIZE, 24"
+        "XCURSOR_SIZE,24"
       ];
 
       misc = {
@@ -72,7 +73,7 @@
           # screen_shader = "$HOME/.config/hypr/shaders/blue_light_filter.frag"
       };
 
-      layerrule = "blur, rofi";
+      layerrule = "blur,rofi";
 
       windowrulev2 = [
         "opacity 0.85 0.85,class:^(discord)$"

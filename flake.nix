@@ -9,8 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
-
     helix-editor = {
       url = "github:helix-editor/helix";
       flake = true;
