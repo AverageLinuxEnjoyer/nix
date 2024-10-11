@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../homeManagerModules/gui/hyprland.nix    
+    ../../modules/gui/hyprland.nix    
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -89,7 +89,7 @@
   };
 
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "hx";
   };
 
   # Let Home Manager install and manage itself.

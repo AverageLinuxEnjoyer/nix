@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/system/zsh.nix
       inputs.home-manager.nixosModules.default
     ];
 
@@ -157,7 +158,6 @@
     unzip
     unrar
     zellij
-    zsh
 
     inputs.helix-editor.packages.${pkgs.system}.helix
   ];
@@ -172,21 +172,6 @@
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     xwayland.enable = true;
-  };
-
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    shellAliases = {
-      ll = "ls -l";
-    };
-    histSize = 10000;
-    ohMyZsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "robbyrussell";
-    };
   };
 
   # XDG portal
