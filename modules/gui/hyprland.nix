@@ -10,6 +10,7 @@
       # inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
       # inputs.hy3.packages.${pkgs.system}.hy3
       pkgs.hyprlandPlugins.hy3
+      inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow
     ];
 
     settings = {
@@ -81,7 +82,10 @@
         "opacity 0.95 0.95,class:^(teams)$"
         "opacity 0.90 0.90,class:^(Slack)$"
         "opacity 0.90 0.90,class:^(Insomnia)$"
+        # "plugin:chromakey,fullscreen:0"
       ];
+
+      # chromakey_background = "rgb(1f1f1f)";
 
       animations = {
           enabled = "yes";
@@ -112,6 +116,7 @@
         "$mainMod, RETURN, exec, kitty ~"
         "$mainMod, Q, killactive, "
         "$mainMod, F, fullscreen"
+        # "$mainMod, C, togglechromakey"
 
         # bind = $mainMod, V, togglefloating, 
         "$mainMod, R, exec, wofi --show drun"

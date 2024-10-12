@@ -25,6 +25,11 @@
       url = "github:outfoxxed/hy3";
       inputs.hyprland.follows = "hyprland";
     };
+
+    hyprchroma = {
+      url = "github:AverageLinuxEnjoyer/HyprChromaNixFix";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = { self, nixpkgs, ... } @inputs: {

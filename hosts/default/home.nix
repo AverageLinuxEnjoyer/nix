@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/gui/hyprland.nix    
+    ../../modules/gui/waybar.nix    
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -25,6 +26,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    hyprpicker
     ungoogled-chromium
     discord
     firefox
@@ -60,18 +62,6 @@
     size = 32;
     gtk.enable = true;
   };
-
-  programs.waybar.enable = true;
-  programs.waybar.package = pkgs.waybar.overrideAttrs (oa: {
-    mesonFlags = (oa.mesonFlags or  []) ++ [ "-Dexperimental=true" ];
-    patches = (oa.patches or []) ++ [
-      (pkgs.fetchpatch {
-        name = "fix waybar hyprctl";
-        url = "https://aur.archlinux.org/cgit/aur.git/plain/hyprctl.patch?h=waybar-hyprland-git";
-        sha256 = "sha256-pY3+9Dhi61Jo2cPnBdmn3NUTSA8bAbtgsk2ooj4y7aQ=";
-      })
-    ];
-  });
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
