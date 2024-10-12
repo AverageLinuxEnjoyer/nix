@@ -3,11 +3,8 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
-    # xwayland.enable = true;
 
     plugins = [
-      # inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
       # inputs.hy3.packages.${pkgs.system}.hy3
       pkgs.hyprlandPlugins.hy3
       inputs.hyprchroma.packages.${pkgs.system}.Hypr-DarkWindow
@@ -31,10 +28,6 @@
 
       input = {
         kb_layout = "us";
-        # kb_variant =
-        # kb_model =
-        # kb_options =
-        # kb_rules =
 
         follow_mouse = "1";
 
@@ -183,7 +176,5 @@
         "$mainMod, mouse:273, resizewindow"
       ];
     };
-
-    # extraConfig = builtins.readFile ./hyprland.conf;
   };
 }
