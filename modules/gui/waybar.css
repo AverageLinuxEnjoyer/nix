@@ -1,21 +1,22 @@
+@define-color bg-color rgba(17, 17, 27, 0.6);
+@define-color text-color-light #b4befe;
+@define-color text-color-dark #cdd6f4;
+
 * {
   border: none;
   font-family: 'Fira Code', 'Symbols Nerd Font Mono';
   font-size: 16px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
   min-height: 45px;
-}
-
-window#waybar {
   background: transparent;
 }
 
 #custom-arch, #workspaces {
   border-radius: 10px;
-  background-color: #11111b;
-  color: #b4befe;
+  background-color: @bg-color;
+  color: @text-color-light;
   margin-top: 15px;
-	margin-right: 15px;
+  margin-right: 15px;
   padding-top: 1px;
   padding-left: 10px;
   padding-right: 10px;
@@ -23,20 +24,20 @@ window#waybar {
 
 #custom-arch {
   font-size: 20px;
-	margin-left: 0px;
-  color: #b4befe;
+  margin-left: 0px;
+  color: @text-color-light;
 }
 
 #workspaces button {
-  background: #11111b;
+  background: @bg-color;
   margin-right: 0px;
-  color: #b4befe;
+  color: @text-color-light;
 }
 
 #clock, #memory, #cpu, #temperature, #backlight, #pulseaudio, #bluetooth, #network, #battery, #window {
   border-radius: 10px;
-  background-color: #11111b;
-  color: #cdd6f4;
+  background-color: @bg-color;
+  color: @text-color-dark;
   margin-top: 15px;
   padding-left: 10px;
   padding-right: 10px;
@@ -47,7 +48,7 @@ window#waybar {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   padding-right: 5px;
-  margin-right: 0
+  margin-right: 0;
 }
 
 #pulseaudio, #network {
@@ -60,3 +61,4 @@ window#waybar {
   margin-left: 15px;
   margin-right: 15px;
 }
+

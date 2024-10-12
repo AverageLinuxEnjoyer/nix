@@ -33,7 +33,6 @@
         };
 
         "hyprland/workspaces" = {
-          # format = "{name}";
           format = "{icon}";
           tooltip = false;
           all-outputs = true;
