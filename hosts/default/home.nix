@@ -4,6 +4,7 @@
   imports = [
     ../../modules/gui/hyprland.nix    
     ../../modules/gui/waybar.nix    
+    ../../modules/gui/rofi.nix
   ];
 
   home.username = "averagelinuxenjoyer";
@@ -28,7 +29,7 @@
     slack
     qbittorrent
     rnote
-    rofi-wayland
+    # rofi-wayland
     obs-studio
     obs-studio-plugins.input-overlay
     steam
