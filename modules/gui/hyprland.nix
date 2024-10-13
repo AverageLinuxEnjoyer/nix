@@ -113,8 +113,10 @@
 
         # bind = $mainMod, V, togglefloating, 
         "$mainMod, R, exec, wofi --show drun"
-        "$mainMod, P, exec, shotman --capture region"
         "$mainMod, S, togglesplit,"  # dwindle
+
+        "$mainMod, P, exec, hyprshot -m region --silent --clipboard-only"
+        "$mainMod SHIFT, P, exec, hyprshot -m region --silent --clipboard-only --freeze"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, H, hy3:movefocus, l"
